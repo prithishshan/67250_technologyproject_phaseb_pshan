@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prithish">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="./static/script.js" defer></script>
+</head>
+<body onload="setYear()">
+    <div class="container">
+        <header class="header">
+            <h1>MonoMuse</h1>
+            <h2 id="greeting">Welcome to the MonoMuse Museum</h2>
+        </header>
+        <nav class="nav_bar">
+            <a href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/tickets.html" id="buy-tickets">Buy Tickets</a>
+            <a href="views/checkout.html">Checkout</a>
+        </nav>
+        <main class="main">
+            <h2>Welcome to MonoMuse</h2>
+            <div id="full-desc">
+                MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity. Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse invites visitors to discover how digital innovation is transforming the way we create, experience, and understand art. Whether you are a first-time visitor or a returning member, our exhibitions offer new perspectives on the role of technology in culture and everyday life. Plan your visit to experience cutting-edge exhibitions, hands-on experiences, and events designed to inspire curiosity and creativity.
+                <p id="readLess">less</p>
+            </div>
+            <div id="short-desc">
+                MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity...
+                <p id="readMore">more</p>
+                </div>
+            <button><a href="views/tickets.html" target="_blank">Visit MonoMuse</a></button>
+        </main>
+        <figure class="main_figure">
+            <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        </figure>
+        <footer class="footer">
+            <p id="copyYear">&copy; MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

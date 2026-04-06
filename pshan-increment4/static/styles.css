@@ -1,0 +1,119 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#logo {
+  width: 15vw;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  border-color: #4d5c3b;
+  }
+
+nav {
+  background-color: black;
+}
+
+nav #selected{
+  color:bisque;
+}
+
+#buy-tickets {
+  color: lightblue;
+  text-decoration: underline;
+}
+
+footer {
+  border-top: 1px solid gray;
+  padding: 18px 16px;
+  text-align: center;
+  color: black;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+form * {
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'checkout_main checkout_main'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar; 
+   display: flex;
+  justify-content: center;
+}
+.main {
+  grid-area: main; 
+}
+.main_figure {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+.checkout_main {
+  grid-area: checkout_main;
+}
+
+#short-desc {
+  display: block;
+}
+#full-desc {
+  display: none;
+}
+
+#readMore {
+  cursor: pointer;
+  font-weight: bold;
+}
+#readLess {
+  cursor: pointer;
+  font-weight: bold;
+}
+#selectTickets {
+  display: block;
+  margin: auto;
+}
+
+#checkoutForm {
+  display: none;
+  margin: auto;
+}
