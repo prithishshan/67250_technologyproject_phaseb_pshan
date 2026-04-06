@@ -7,19 +7,23 @@
     <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
     <meta name="description" content="MonoMuse website redesign project">
     <title>MonoMuse</title>
-    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>MonoMuse</h1>
         <nav>
-            <a href="index.html">Home</a>
+            <a id="selected" href="index.html">Home</a>
             <a href="views/explore.html">Explore</a>
             <a href="views/exhibitions.html">Exhibitions</a>
-            <a href="views/tickets.html">Buy Tickets</a>
+            <a href="views/tickets.html" id="buy-tickets">Buy Tickets</a>
             <a href="views/checkout.html">Checkout</a>
         </nav>
     </header>
+    <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
     <div class="main">
         <h2>Welcome to MonoMuse</h2>
         <p>

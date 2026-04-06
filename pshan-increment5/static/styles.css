@@ -24,3 +24,7 @@
 
 #map { height: 180px; }
 
+#logo {
+  width: 18%;
+  display: block;
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonoMuse - Explore</title>
     <link rel="stylesheet" href="../static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Checkout</h1>
@@ -13,16 +14,18 @@
         <a href="./explore.html">Explore</a>
         <a href="./exhibitions.html">Exhibitions</a>
         <a href="./tickets.html">Buy Tickets</a>
-        <a href="./checkout.html">Checkout</a>
+        <a id="selected" href="./checkout.html">Checkout</a>
     </nav>
     <br><br>
+    <form>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
+    <input type="text" id="name" name="name" required><br>
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
+    <input type="email" id="email" name="email" required><br>
     <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" name="quantity" value="1" min="1" max="100"><br><br>
+    <input type="number" id="quantity" name="quantity" value="1" min="1" max="100"><br>
     <button type="submit">Submit</button>
+    </form>
     <footer>
         <p>&copy; 2026 MonoMuse. All rights reserved.</p>
     </footer>
