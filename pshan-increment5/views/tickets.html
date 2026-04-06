@@ -50,14 +50,28 @@
             <input type="text" id="name" name="name" required><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br>
+            <label for="email">Zip Code:</label>
+            <input title="zip" type="text" id="zip" name="zip" maxlength="5"><br>
+            <label for="trip-date">Select a date (open Monday thru Friday):</label>
+            <input type="date" id="trip-date" name="trip"><br>
+            <div style="display:flex; flex-direction:row; justify-content: center;">
             <label for="type">Type:</label>
             <select title="type" name="type" id="type">
               <option value="adult">Adult</option>
               <option value="child">Child</option>
             </select>
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1" max="100"><br>
-            <p>Total: $</p><p id="totalAmount">0.00</p>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+            </div><br>
+             <br>
+            <div style="display:flex; flex-direction:row; justify-content: center; gap: 1px;">
+            <p>Subscribe to our newsletter</p>
+            <input type="checkbox" id="subscribe" name="subscribe" value="newsletter"> 
+            </div>
+            <br>
+            <div style="display:flex; flex-direction:row"><p>Total:</p><p id="totalAmount">0.00</p></div>
+            <br>
+
             <button type="submit">Buy Now</button>
             </form>
         </div>

@@ -104,6 +104,8 @@ let quantity = 1;
 function updateTotal() {
     type = $("#type").val();
     quantity = $("#quantity").val();
+    quantity = Math.min(quantity, 10);
+    $("#quantity").val(quantity);
     let price = 0; 
     if (type == "adult") {
         price = 20;
@@ -111,7 +113,7 @@ function updateTotal() {
         price = 10;
     }
     total = price * quantity;
-    $("#totalAmount").text(total.toFixed(2));
+    $("#totalAmount").text(`$${total.toFixed(2)}`);
 }
 
 $("#type").change(updateTotal);
