@@ -6,6 +6,8 @@
     <title>MonoMuse - Explore</title>
     <link rel="stylesheet" href="../static/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 <script src="../static/script.js" defer></script>  
 </head>
 <body>
@@ -13,15 +15,17 @@
         <header class="header">
             <h1>Explore</h1>
         </header>
+
         <nav class="nav_bar">
-            <a href="../index.html">Home</a>
-            <a id="selected" href="./explore.html">Explore</a>
-            <a href="./exhibitions.html">Exhibitions</a>
-            <a href="./tickets.html">Buy Tickets</a>
-            <a href="./checkout.html">Checkout</a>
-        </nav>
+            <i class="fa fa-bars" id="hamburger"></i>
+            <a href="../index.html" class="responsive">Home</a>
+            <a href="./explore.html" class="responsive">Explore</a>
+            <a href="./exhibitions.html" class="responsive">Exhibitions</a>
+            <a href="./tickets.html" class="responsive buy-tickets">Buy Tickets</a>
+            <a href="./donate.html" class="responsive">Donate</a>
+      </nav>
         <figure class="main_figure">
-            <img src="../static/museum.jpg" alt="MonoMuse" width="500pt" height="500pt">
+            <img src="../static/museum.jpg" alt="MonoMuse" id="museumimg">
         </figure>
         <main class="main">
             <h2>Our Mission</h2>

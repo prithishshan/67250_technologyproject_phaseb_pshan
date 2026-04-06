@@ -7,8 +7,14 @@
   line-height: 1.5;
 }
 
+
 #logo {
   width: 15vw;
+  display: block;
+}
+
+#museumimg {
+  width: 50vw;
   display: block;
 }
 
@@ -33,7 +39,7 @@ nav #selected{
   color:bisque;
 }
 
-#buy-tickets {
+.buy-tickets {
   color: lightblue;
   text-decoration: underline;
 }
@@ -70,14 +76,34 @@ form * {
     'footer footer';
 }
 
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: grid; /* Turns this div into a CSS Grid layout */
+    grid-template-areas:   /* Defines the layout structure */
+      'header'
+      'nav_bar'
+      'main'
+      'checkout_main'
+      'main-img'
+      'footer';
+  }
+}
+
 /* Places each element into the correct area of the grid */
 .header {
    grid-area: header; 
 }
+
 .nav_bar {
    grid-area: nav_bar; 
    display: flex;
-  justify-content: center;
+  justify-content: left;
+}
+@media screen and (max-width: 500px) {
+  .nav_bar  {
+    flex-direction: column;
+  }
 }
 .main {
   grid-area: main; 
@@ -116,4 +142,27 @@ form * {
 #checkoutForm {
   display: none;
   margin: auto;
+}
+
+#map { height: 180px; }
+
+#exhibitVideo {
+  width: 75vw;
+  height: 50vw;
+}
+#hamburger {
+  color:white;
+  margin: auto 10 auto 0;
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #hamburger {
+    display: block;
+  }
+  
+  .responsive {
+    display: none;
+  }
+
 }

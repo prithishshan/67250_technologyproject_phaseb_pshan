@@ -69,7 +69,6 @@ function setActive() {
     const navLinks = document.querySelectorAll("nav a");
     
     navLinks.forEach((link) => {
-        console.log(link.href);
         if (link.href === window.location.href) {
             link.id = "selected";
         } else {
@@ -93,6 +92,11 @@ $("#readMore").click(function(){
 $("#selectTickets").click(function(){
     $("#checkoutForm").show();
     $("#selectTickets").hide();
+});
+
+$("#hamburger").click(function() {
+    var hasResponsive = $('nav a').first().hasClass("responsive");
+    hasResponsive ? $("nav a").removeClass("responsive") : $("nav a").addClass("responsive");
 });
 
 function purchase() {
