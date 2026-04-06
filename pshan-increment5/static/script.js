@@ -55,7 +55,6 @@ function greeting() {
             greetEl.innerHTML = "Good Night!"
         }
     }
-    console.log(currtime)
 }
 
 greeting()
@@ -99,6 +98,29 @@ $("#hamburger").click(function() {
     hasResponsive ? $("nav a").removeClass("responsive") : $("nav a").addClass("responsive");
 });
 
-function purchase() {
-    alert("Thank you for your purchase! We look forward to seeing you at MonoMuse.");
+let type = "adult";
+let quantity = 1;
+
+function updateTotal() {
+    type = $("#type").val();
+    quantity = $("#quantity").val();
+    let price = 0; 
+    if (type == "adult") {
+        price = 20;
+    } else if (type == "child") {
+        price = 10;
+    }
+    total = price * quantity;
+    $("#totalAmount").text(total.toFixed(2));
 }
+
+$("#type").change(updateTotal);
+$("#quantity").change(updateTotal);
+
+
+function purchase() {
+    updateTotal();
+    alert(`Thank you for your purchase of ${quantity} ${type} tickets! We look forward to seeing you at MonoMuse.`);
+}
+
+updateTotal();
