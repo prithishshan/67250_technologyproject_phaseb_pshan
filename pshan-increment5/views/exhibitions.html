@@ -6,11 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="../static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
 <script src="../static/script.js" defer></script> 
 </head>
-<body>
+<body onload="setYear()">
     <div class="container">
         <header class="header">
             <h1>Exhibitions</h1>
@@ -25,12 +25,25 @@
             <a href="./logistics.html" class="responsive">Hours & Location</a>
       </nav>
         <main class="main">
-            <h3>Ancient Greek Ceramics</h3>
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <i class="arrow fa-solid fa-arrow-left" onclick="moveSlideBwd()"></i>
+            <i class="arrow fa-solid fa-arrow-right" onclick="moveSlideFwd()"></i>
+            </div>
+            <div class="slide">
+            <h2>Ancient Greek Ceramics</h2>
             <iframe title="Ancient Greek Ceramics" id="exhibitVideo" src="https://www.youtube.com/embed/k2fdtepbkz8?si=nTnw43W1Jgl9LQ9E" referrerpolicy="strict-origin-when-cross-origin" frameborder="0"></iframe>
             <p>Greek architecture and sculpture is revered around the world. But, Greek artisans also had great prowess in the medium of pottery.</p>
-            <h3>Post Modern Art</h3>
+            </div>
+            <div class="slide inactive">
+            <h2>Renaissance Mosaic</h2>
+            <iframe title="Renaissance Mosaic" id="exhibitVideo" src="https://www.youtube.com/embed/sKuVmGpKQko?si=6WwK7kD8sU9iyW0J" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <p>Mosaic art is a type of art that creates a design by using small pieces of material, such as glass, stone or even recycled materials. The pieces are called tesserae, and they are typically arranged in a grid pattern. Mosaics can be used to decorate a variety of surfaces, including walls, floors, ceilings, and pools.</p>
+            </div>
+            <div class="slide inactive">
+            <h2>Post Modern Art</h2>
             <iframe title="Post Modern Art" id="exhibitVideo" src="https://www.youtube.com/embed/5x4ntciHTXU?si=Pd0G4BvISafYpnkw" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             <p>Post modern art is characterized by its rejection of traditional artistic values and its embrace of abstract stylings. Our display features several paintings and exhibitions by acclaimed contemporary artists.</p>
+            </div>
         </main>
         <footer class="footer">
             <p id="copyYear">&copy; MonoMuse. All rights reserved.</p>

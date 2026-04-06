@@ -126,3 +126,38 @@ function purchase() {
 }
 
 updateTotal();
+
+class SlideShow {
+    constructor() {
+        this.slides = document.querySelectorAll(".slide");
+        this.idx = 0;
+        this.length = this.slides.length;
+    }
+    render() {
+        for (var i = 0; i < this.length; i++) {            
+            if (i == this.idx) {
+                this.slides[i].classList.remove("inactive");
+            } else {
+                this.slides[i].classList.add("inactive");
+            }
+        }
+    }
+    incrSlide() {
+        this.idx = (this.idx + 1) % this.length
+        this.render();
+    }
+
+    decrSlide() {
+        this.idx = (this.idx - 1 + this.length) % this.length;
+        this.render();
+    }
+}
+const ss = new SlideShow();
+
+function moveSlideFwd() {
+    ss.incrSlide();
+}
+
+function moveSlideBwd() {
+    ss.decrSlide();
+}

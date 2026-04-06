@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="../static/script.js" defer></script>  
 </head>
-  <body>
+  <body onload="setYear()">
     <div class="container">
       <header class="header">
         <h1>MonoMuse</h1>
@@ -53,7 +53,7 @@
             <label for="email">Zip Code:</label>
             <input title="zip" type="text" id="zip" name="zip" maxlength="5"><br>
             <label for="trip-date">Select a date (open Monday thru Friday):</label>
-            <input type="date" id="trip-date" name="trip"><br>
+            <input type="date" id="trip-date" name="trip" required><br>
             <div style="display:flex; flex-direction:row; justify-content: center;">
             <label for="type">Type:</label>
             <select title="type" name="type" id="type">
