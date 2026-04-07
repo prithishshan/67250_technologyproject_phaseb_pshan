@@ -76,7 +76,7 @@ function setActive() {
     });
 }
 setActive();
-
+// read mroe and read less toggles
 $("#readLess").click(function(){ 
     $("#short-desc").show(); 
     $("#full-desc").hide(); 
@@ -100,11 +100,12 @@ $("#hamburger").click(function() {
 
 let type = "adult";
 let quantity = 1;
-
+//logic to update displayed total from form input
 function updateTotal() {
     type = $("#type").val();
     quantity = $("#quantity").val();
     quantity = Math.min(quantity, 10);
+    //make sure inputted quantity never exceeds 10
     $("#quantity").val(quantity);
     let price = 0; 
     if (type == "adult") {
@@ -122,17 +123,20 @@ $("#quantity").change(updateTotal);
 
 function purchase() {
     updateTotal();
+    //format form details in alert
     alert(`Thank you for your purchase of ${quantity} ${type} tickets! We look forward to seeing you at MonoMuse.`);
 }
 
 updateTotal();
 
+//class to control exhibitions carousel
 class SlideShow {
     constructor() {
         this.slides = document.querySelectorAll(".slide");
         this.idx = 0;
         this.length = this.slides.length;
     }
+    //logic to change class attributes after user triggers slide advancement or step back
     render() {
         for (var i = 0; i < this.length; i++) {            
             if (i == this.idx) {
@@ -153,11 +157,11 @@ class SlideShow {
     }
 }
 const ss = new SlideShow();
-
+//advance slide forward
 function moveSlideFwd() {
     ss.incrSlide();
 }
-
+//advance backward
 function moveSlideBwd() {
     ss.decrSlide();
 }
