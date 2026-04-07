@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prithish">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="../static/script.js" defer></script>
+</head>
+<body onload="setYear()">
+    <div class="container">
+        <header class="header">
+            <h1>MonoMuse</h1>
+            <h2 id="greeting">Welcome to the MonoMuse Museum</h2>
+        </header>
+        <nav class="nav_bar">
+            <i class="fa fa-bars" id="hamburger"></i>
+            <a href="../index.html" class="responsive">Home</a>
+            <a href="./explore.html" class="responsive">Explore</a>
+            <a href="./exhibitions.html" class="responsive">Exhibitions</a>
+            <a href="./tickets.html" class="responsive buy-tickets">Buy Tickets</a>
+            <a href="./donate.html" class="responsive">Donate</a>
+            <a href="./logistics.html" class="responsive">Hours & Location</a>
+        </nav>
+        <main class="main">
+            <h2>Hours of Availability:</h2>
+            <p>Monday: 10am - 5pm</p>
+            <p>Tuesday: 10am - 5pm</p>
+            <p>Wednesday: 10am - 5pm</p>
+            <p>Thursday: 10am - 5pm</p>
+            <p>Friday: 10am - 5pm</p>
+            <p>Saturday: 10am - 2pm</p>
+        </main>
+        <figure class="main_figure">
+            <h2>Get Directions:</h2>
+            <a href="https://www.google.com/maps/search/?api=1&query=40.4387%2C-79.9972">1234 Monomuse Ave, 15243, Pittsburgh, PA</a>
+            <div id="map"></div>
+        </figure>
+        <footer class="footer">
+            <p id="copyYear">&copy; MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        var map = L.map('map').setView([40.4387, -79.9972], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        </script>
+</body>
+</html>
